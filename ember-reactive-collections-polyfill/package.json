@@ -1,6 +1,6 @@
 {
   "name": "ember-reactive-collections-polyfill",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Polyfill for @ember/reactive/collections for ember-source < 6.8",
   "keywords": [
     "ember-addon",
