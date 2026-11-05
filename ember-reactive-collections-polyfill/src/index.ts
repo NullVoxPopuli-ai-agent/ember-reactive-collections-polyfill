@@ -1,5 +1,5 @@
 import {
-  dependencySatisfies,
+  appEmberSatisfies,
   importSync,
   macroCondition,
 } from '@embroider/macros';
@@ -8,9 +8,7 @@ import * as polyfill from './collections/index.ts';
 
 type Collections = typeof polyfill;
 
-const impl: Collections = macroCondition(
-  dependencySatisfies('ember-source', '>=6.8.0'),
-)
+const impl: Collections = macroCondition(appEmberSatisfies('>=6.8.0'))
   ? (importSync('@ember/reactive/collections') as Collections)
   : polyfill;
 

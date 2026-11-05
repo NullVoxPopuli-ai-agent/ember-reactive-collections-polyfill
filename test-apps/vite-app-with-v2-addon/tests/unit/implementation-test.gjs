@@ -1,6 +1,6 @@
 import { module, test } from 'qunit';
 import {
-  dependencySatisfies,
+  appEmberSatisfies,
   importSync,
   macroCondition,
 } from '@embroider/macros';
@@ -16,7 +16,7 @@ const NAMES = [
 ];
 
 module('Unit | implementation selection', function () {
-  if (macroCondition(dependencySatisfies('ember-source', '>=6.8.0'))) {
+  if (macroCondition(appEmberSatisfies('>=6.8.0'))) {
     test('re-exports the native implementation', function (assert) {
       const native = importSync('@ember/reactive/collections');
 
